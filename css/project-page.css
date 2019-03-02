@@ -1,0 +1,27 @@
+@media only screen and (min-width: 1000px) {
+
+    #project-page .content{
+        grid: none;
+    }
+
+    #project-page ul{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .section-title{
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    article{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 5%;
+    }
+
+    section article{
+        border-bottom: none;
+    }
+
+}

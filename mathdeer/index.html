@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ken Chen - Game Developer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="A,V,B">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/project-page.css">
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <h1><a href="/index.html">Ken Chen</a></h1>
+                <p>Game Developer</p>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Projects</a></li>
+                        <li><a href="/about/index.html">About Me</a></li>
+                        <li><a href="/contact/index.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="project-page">
+                
+                <h2>Math Deer</h2>
+                
+                <ul><h4>Platforms:</h4>
+                    <li>Android: <a href="#" class="link">Download Link</a></li>
+                    <li>PC/Mac: <a href="#" class="link">Download Link</a></li>
+                </ul>
+
+                <ul>
+                    <h4>This page contains the processes and challenges of the project:</h4>
+                    <li><a href="#concept-gameplay" class="link">Concept and Gameplay Screenshots</a></li>
+                    <li><a href="#technical-challenges" class="link">Technical/Programming Process and Challenges</a></li>
+                    <li><a href="#art-challenges" class="link">Game Design/Art Process and Challenges</a></li>
+                </ul>
+                
+                <div class="content">     
+
+                    <div id="concept-gameplay">
+                        <h4 class="section-title">Concept and Gameplay</h4>
+
+                        <h4 class="gif-title">Game Concept</h4>
+                        <article>     
+                            <img src="../gif/mathdeer/concept.gif" alt="game-name preview">
+                            <p>My idea for the game was a 2D endless runner in a forest, and I wanted the visual to have depth with layers of forest scrolling past. I am mainly a programmer, and I was tired of the "programmer's art" that I have always done in the past. So this was my attemp at trying to make things look nice, and by the end it felt quite rewarding seeing myself improve a lot in art. <br><br>
+                            This concept art consisted of several layers of trees and lights in a parallax scrolling effect giving it more depth in a 2D side scroller along with a run cycle of a deer. I really liked the outcome of this, so it became the aesthetic and feel of the game.<br><br> For the gameplay I wanted something a bit more unique to the endless runner, so I decided to add math questions that will help players with mental math.</p>
+                        </article>
+
+                        <h4 class="gif-title">Gameplay - Movement and Dashing</h4>
+                        <article>
+                            <img src="../gif/mathdeer/movement.gif" alt="game-name preview">
+                            <p>The player is running endlessly as a deer and there are two actions, jumping and dashing.</p>
+                            <img src="../gif/mathdeer/gameplay.gif" alt="game-name preview">
+                             <p>Three jumps can be made before touching the ground. <br><br> Dashing can be used without limit, but there is a slight cooldown between dashes. <br><br> The combination of the two actions allowed for challenging and fun obstacles like what you see here.</p>
+                        </article>
+
+                        <h4 class="gif-title">Gameplay - Math System</h4>
+                        <article>
+                            <img src="../gif/mathdeer/question.gif" alt="game-name preview">
+                            <p>When picking up an upgrade or stars, the player will trigger a math problem that may consist multiple operations and parenthesis.</p>
+                            <img src="../gif/mathdeer/answer.gif" alt="game-name preview">
+                            <p>In order to answer the problem, there will be three answers to choose from, and the player will have to pick up the correct one. If the answer is correct, then the upgrade that was picked up will be applied.</p>
+                            <img src="../gif/mathdeer/math-setting.gif" alt="game-name preview">
+                            <p>There is also a Math Setting where the player can select the kinds of math problem they wish to practice/play with.</p>
+                            <img src="../img/screenshots/mathdeer/math-result.PNG" alt="game-name preview">
+                            <p>At the end of the run, the player is presented with all the math questions they did during that run.
+                            </p>
+                        </article>
+
+                        <h4 class="gif-title">Gameplay - Upgrades/PowerUps</h4>
+                        <article>
+                            <img src="../img/screenshots/mathdeer/upgrades.PNG" alt="game-name preview">
+                            <p>The game consists of four upgrades and two pickups.</p>
+                        </article>
+                    </div>
+
+                    <div id="technical-challenges">
+                        <h4 class="section-title">Technical/Programming Challenges</h4>
+
+                        <h4 class="gif-title">Collision Detection</h4>
+                        <article>
+                            <p>Problem:<br> Whenever the player jumps and lands, it's 2D colliders sinks into the ground collider for a couple frames, then it pops back up making it feel awful. This is probably due to the game being on a very small scale since it's pixel art and Unity doesn't seem to handle physics well in a very small scale.<br><br> 
+                            Solution: <br>I used Unity's raycast to detect collisions between the colliders in the Update loop. This is the way it works, the gameobject that needs collision would constantly shoot rays from the origin(collider's edges) at a certain ray length, to detect a hit with another collider. And once it detects a hit, it would set it's X or Y velocity to zero depending on which direction the collision is being detected.</p>
+                            <img src="/img/screenshots/mathdeer/collision-detection.PNG" alt="game-name preview">
+                        </article>
+
+                        <h4 class="gif-title">Platform Prefabs</h4>
+                        <article>
+                            <p>Problem:<br> The version of Unity I worked with didn't have nested prefabs yet, and that really killed the workflow. There were specific coin/obstacle patterns I wanted, so generating the coins randomly in a grid based system would not work. In the beginning I had a prefab for every different platforms and in each of the platforms had coin and obstacle prefabs. And without nested prefabs, if I were to make a change to the base coin prefab, the change won't reflect on the coins inside the platform prefab because it is nested within another prefab. So I had to go through them one by one to change it, which would take too long and too inefficient. 
+                            <br><br> Solution:
+                            <br>I simply broke the cluster of nested prefabs and put them together in the scene so it's just 3 different prefabs grouped together under a gameobject, and I instantiated that gameobject like a prefab. It's not the cleanest/most flexible way to do it, but it worked for what I needed.</p>
+                            <img src="/img/screenshots/mathdeer/platform-prefabs.PNG" alt="game-name preview">
+                        </article>
+
+                        <h4 class="gif-title">Math Question Generator</h4>
+                        <article>
+                            <p>Problem:<br> I wanted to generate random math questions with random operands from 1-9 that had 1 or 2 operators with all 4 basic math operations. But with division in, it would create decimals/fractions, and solving for non-whole numbers would not be fair for the game. 
+
+                            <br><br> Solution:
+                            <br>If division is in the problem then I will simply regenerate the divisor as a factor of the dividend.</p>
+                        </article>
+
+                        <h4 class="gif-title">Code Architecture - Flexibility/Modularity/Maintainability</h4>
+                        <article>
+                            <p>Problem:<br> Usually in a reletively small project I woulndn't have to worry about how each class/script interacted with each other. But near the end of this project, I had around 40 classes/scripts, and it was a bit harder to keep track of things. It has also become hard to add new features or edit the project without breaking things. I had a lot of classes referencing each other creating a lot of dependencies.<br><br> 
+                            Solution:
+                            <br>I ended up fixing a lot of the dependency problems by using more Events, having scripts broadcast events prevented it from referencing other scripts. And I also used scriptable objects to seperate some of the dependencies even more. In the end I broke up a lot of the scripts and tried to follow the one responsibility principle per script and it made the code a lot more clear. With each script being responsible for 1 thing only, which also created more modular systems.</p>
+
+                            <p>Component Based vs Object Oriented Design:<br>Unity itself follows a component based design, and that works because every entity or thing in a game is a gameobject, and every single gameobject has components that controls it's behaviours. <br><br>In the beginning I had a class called "PickUp" and all it does is executing a funnction when it touches the player, then it destroys itself. Then I had StarPickUp, MagnetPickUp,.... all inherit from it. From a OOP design this would make sense. But then when there are a lot more different kinds of pick ups involved it started to not make sense, the star and coin pick up both added score, but the coin pick up played a sound and the star pick up added a star. And this situation happened to a lot of other systems also preventing it from being modular. <br><br> Then I started breaking down each entity into components, and I would make a script for every component. So now instead of just "StarPickUp" component on the star pickup, it would have "DestroyOnContact", "AddScoreOnDestroy", and "AddStarOnDestroy" components attached to it. With it being broken down to three basic actions made it so much more modular since I can reapply the same components to other gameobjects that has that same function.</p>
+                        </article>
+                       
+                    </div>
+
+                    <div id="art-challenges">
+                        <h4 class="section-title">Game Design/Art Process</h4>
+                    
+                        <h4 class="gif-title">Setting the tone/feel of the game</h4>
+                        <article>
+                            <img src="/img/screenshots/mathdeer/environment-concept.PNG" alt="game-name preview">
+                            <img src="/img/screenshots/mathdeer/player-concept.PNG" alt="game-name preview">
+                            <img src="/gif/mathdeer/question.gif" alt="game-name preview">
+                            <p></p>
+                            <img src="/gif/mathdeer/answer.gif" alt="game-name preview">
+                        </article>
+                    </div>
+
+                </div>
+            </section>
+            
+            <footer>
+                <ul>
+                    <li><a href="/index.html">Projects</a></li>
+                    <li><a href="/about/index.html">About Me</a></li>
+                    <li><a href="/contact/index.html">Contact</a></li>
+                </ul>
+            
+                <div class="footer-sm">
+                    <a href="#"><img src="/img/icons/facebook_icon.png" alt="facebook icon"></a>
+                    <a href="#"><img src="/img/icons/linkedin_circle_black-512.png" alt="linkedin icon"></a>
+                    <a href="#"><img src="/img/icons/itchio-logo.png" alt="itch.io icon"></a>
+                </div>
+            
+                <p>Designed and Developed by <a href="/about/index.html" class="footer-note">Ken Chen</a></p>
+            </footer>
+        </main>
+    </body>
+</html>
