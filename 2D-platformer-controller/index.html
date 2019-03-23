@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ken Chen - Game Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="A,V,B">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project-page.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1><a href="../index.html">Ken Chen</a></h1>
+            <p>Game Developer</p>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Projects</a></li>
+                    <li><a href="../about/index.html">About Me</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="project-page">
+
+            <h2>2D Platformer Controller</h2>
+            <!--
+            <ul>
+                <h4>Platforms:</h4>
+                <li>PC/Mac: <a href="#" class="link">Download Link</a></li>
+            </ul>
+            -->         
+            <ul>
+                <h4>This page contains screenshots/GIFs of the project:</h4>
+                <li><a href="#concept-gameplay" class="link">Concept and Gameplay Screenshots</a></li>
+                <li><a href="#technical-challenges" class="link">Processes and Challenges</a></li>
+            </ul>
+
+            <div class="content">
+
+                <h4 class="gif-title">Summary of What I Did: </h4>
+                <article>
+                    <p>PROGRAMMING: <br>
+                        -Custom 2D collision with Unity's raycast.<br>
+                        -2D movement with jump that feels more weighty.<br>
+                        -Slope climb/sliding based on slope angles. <br>
+                        -Wall climb and wall slide. <br>
+                        -A melee combo system using animation events.</p>
+
+                        <p>ART/DESIGN: <br>
+                            -Created all the animations to test this 2D platformer controller.<br>
+                            -Idle/Run cycles. <br>
+                            -Slash animations.</p>
+                </article>
+
+                <div id="concept-gameplay">
+                    <h4 class="gif-title"></h4>
+                    <article>
+                        <img src="../gif/2Dplatformer/jump.gif" alt="game-name preview">
+                        <p>An improved jump that handles multiple mid air jumps and calculates it's own gravity based on how long it takes to get to highest point. Also with gravity variations for the duration of the jump making it feel more dynamic and weighty during the fall.</p>
+                        <img src="../gif/2Dplatformer/dash.gif" alt="game-name preview">
+                        <p>A dash that can be used on ground and midair that can allow interesting gameplay.</p>
+                        <img src="../gif/2Dplatformer/slope.gif" alt="game-name preview">
+                        <p>Allows climbing slopes at certain speeds and automatically slides down slopes at specified angles. </p>
+                        <img src="../gif/2Dplatformer/wall-jump.gif" alt="game-name preview">
+                        <p>Wall jump and wall slides that allows a responsive jump direction based on directional inputs.</p>
+                        <img src="../gif/2Dplatformer/wall-slide.gif" alt="game-name preview">
+                        <p></p>
+                        <img src="../gif/2Dplatformer/combo.gif" alt="game-name preview">
+                        <p>A melee combo that's built with animation events. Added slight frame freeze and screen shake to make it feel good.</p>
+                    </article>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <ul>
+                <li><a href="../index.html">Projects</a></li>
+                <li><a href="../about/index.html">About Me</a></li>
+                <li><a href="../contact/index.html">Contact</a></li>
+            </ul>
+
+            <div class="footer-sm">
+                <a href="#"><img src="../img/icons/facebook_icon.png" alt="facebook icon"></a>
+                <a href="#"><img src="../img/icons/linkedin_circle_black-512.png" alt="linkedin icon"></a>
+                <a href="#"><img src="../img/icons/itchio-logo.png" alt="itch.io icon"></a>
+            </div>
+
+            <p>Designed and Developed by <a href="../about/index.html" class="footer-note">Ken Chen</a></p>
+        </footer>
+    </main>
+</body>
+
+</html>
