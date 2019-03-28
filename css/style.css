@@ -296,6 +296,9 @@ section h2 {
              object-fit: fill;
         }
 
+        p{
+            font-size: 18px;
+        }
     }
 
 /* Footer Styling -------------------------------------------------------- */
