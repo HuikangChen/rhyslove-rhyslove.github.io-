@@ -26,94 +26,45 @@
 
         <section id="project-page">
 
-            <h2>State Machine Node Editor</h2>
-            <!--
-            <ul>
-                <h4>Platforms:</h4>
-                <li>PC/Mac: <a href="#" class="link">Download Link</a></li>
-            </ul>
-            --> 
-            <!--        
-            <ul>
-                <h4>This page contains screenshots/GIFs of the project:</h4>
-                <li><a href="#concept-gameplay" class="link">Concept and Gameplay Screenshots</a></li>
-                <li><a href="#technical-challenges" class="link">Processes and Challenges</a></li>
-            </ul>
-    -->
-            <div class="content" style="grid-template-columns:none;">
+        <h2>State Machine Node Editor</h2>
 
-                <article>
-                    <h3>First time simple approach</h3>
-                   <img src="../img/screenshots/behaviour-editor/stage1.PNG" alt="game-name preview">
+        <div class="content" style="grid-template-columns:none;">
+        
+            <article>
+                <h3>State Machine Editor</h3>
+                <ul>
+                <li>Github: <a href="https://github.com/HuikangChen/AIBehaviourNodeEditor" class="link"> Source Code</a> </li>
+                </ul>
+                <img src="../gif/behaviour-editor/editor-demo.gif" alt="game-name preview">
+            
+                <p>-Designers can now work with a visual graph which reduces the time spent on figuring the graph <br>
+                    -Each state machine is saved as a graph <br>
+                    -States are more complex as it contains more events which allows more design <br>
+                </p>
+            </article>
 
-                    <h4>Game Description:</h4>
-                    <p>A 2D Shoot 'Em Up game with a combination based skill system. Goal of the game is to stay alive while shooting
-                        cubes with awesome skills.</p>
-                </article>
-
-                <article>
-                    <h3>A more flexible/modular solution</h3>
-                    <img src="../img/screenshots/behaviour-editor/stage2.PNG" alt="game-name preview">
-                
-                    <h4>Game Description:</h4>
-                    <p>A 2D Shoot 'Em Up game with a combination based skill system. Goal of the game is to stay alive while shooting
-                        cubes with awesome skills.</p>
-                </article>
-
-                <article>
-                    <h3>Strategy/Policy Pattern for State Machines</h3>
-                    <img src="../img/screenshots/behaviour-editor/statecontroller-class.PNG" alt="game-name preview">
-                
-                    <h4>Game Description:</h4>
-                    <p>A 2D Shoot 'Em Up game with a combination based skill system. Goal of the game is to stay alive while shooting
-                        cubes with awesome skills.</p>
-                </article>
-
-                <article>
-                    <h3>State Class - The start of our strategy pattern implementation</h3>
-                    <img src="../img/screenshots/behaviour-editor/state-class.PNG" alt="game-name preview">
-                
-                    <h4>Game Description:</h4>
-                    <p>A 2D Shoot 'Em Up game with a combination based skill system. Goal of the game is to stay alive while shooting
-                        cubes with awesome skills.</p>
-                </article>
-
-                <article>
-                    <h3>Action Class</h3>
-                    <img src="../img/screenshots/behaviour-editor/action-class.PNG" alt="game-name preview">
-                
-                    <h4>Game Description:</h4>
-                    <p>A 2D Shoot 'Em Up game with a combination based skill system. Goal of the game is to stay alive while shooting
-                        cubes with awesome skills.</p>
-                </article>
-
-                <article>
-                    <h3>Decision Class</h3>
-                    <img src="../img/screenshots/behaviour-editor/decision-class.PNG" alt="game-name preview">
-                
-                    <h4>Game Description:</h4>
-                    <p>A 2D Shoot 'Em Up game with a combination based skill system. Goal of the game is to stay alive while shooting
-                        cubes with awesome skills.</p>
-                </article>
-
-                <article>
-                    <h3>Transition Class</h3>
-                    <img src="../img/screenshots/behaviour-editor/transition-class.PNG" alt="game-name preview">
-                
-                    <h4>Game Description:</h4>
-                    <p>A 2D Shoot 'Em Up game with a combination based skill system. Goal of the game is to stay alive while shooting
-                        cubes with awesome skills.</p>
-                </article>
-
-                <article>
-                    <h3>Finally the state machine editor</h3>
-                    <img src="../gif/behaviour-editor/editor-demo.gif" alt="game-name preview">
-                
-                    <h4>Game Description:</h4>
-                    <p>A 2D Shoot 'Em Up game with a combination based skill system. Goal of the game is to stay alive while shooting
-                        cubes with awesome skills.</p>
-                </article>
-            </div>
+            <article>
+                <h3>Simple approach with enums and switch/case statements</h3>
+                <img src="../img/screenshots/behaviour-editor/stage1.PNG" alt="game-name preview">
+        
+                <p>-No flexibility in larger projects and in teams<br>
+                    -Hard to maintain<br>
+                    -Designers can't make changes easily which makes it harder to test certain designs <br>
+                    -Cannot reuse most parts of this</p>
+            </article>
+        
+            <article>
+                <h3>Strategy/Policy Pattern for state machine, a more flexible/modular approach</h3>
+                <div>
+                    <img class="mySlides" src="../img/screenshots/behaviour-editor/stage2.PNG" alt="game-name preview">
+        
+                </div>
+                <p>-Designers can now drag and drop pieces together to create their own State Machine <br>
+                    -A modular system that can work for any behaviours <br>
+                    -Easily maintained by the programmers <br>
+                    -Still not visual enough for more complex AI behaviours </p>
+            </article>
+    
         </section>
 
         <footer>
